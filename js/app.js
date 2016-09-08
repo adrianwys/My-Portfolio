@@ -11,16 +11,6 @@ $(document).ready(function() {
              });
         });
     });
-    //sticky menu (not finished yet)
-    var stickyMenuTop = $('.header-nav').offset().top;
-    var scrollTop = $(window).scrollTop();
-    $(window).on('scroll', function(){
-            if (scrollTop >stickyMenuTop) {
-                $('.header-nav').addClass('sticky');
-            } else {
-                $('.header-nav').removeClass('sticky');
-            }
-    });
     // scrolling to section about
     var button = $('.scrollButton');
     var aboutSection = $('#about');
