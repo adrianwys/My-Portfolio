@@ -105,7 +105,7 @@ $(document).ready(function() {
             }
             //close button
            close.text('close');
-           close.css('color','white').css('border','1px solid white').css('text-align','center').css('margin','40px auto').css('width','100px');
+           close.css('color','white').css('border','1px solid white').css('text-align','center').css('margin','40px auto').css('width','100px').css('cursor','pointer');
            //wprowadzenie elementow do DOM
              body.append(bigWindow);
              bigWindow.append(galleryWindow);
@@ -117,14 +117,9 @@ $(document).ready(function() {
              });
         });
     });
-    //smooth scroll
-    $(function(){
-        jQuery.scrollSpeed(200,200);
-    });
     // scroll animations
     $(window).scroll(function() {
             var windowWidth = $(this).width();
-            var windowHeight = $(this).height();
             var windowScrollTop = $(this).scrollTop();
             //section about animation
             var aboutAnimation = function(){
@@ -132,7 +127,7 @@ $(document).ready(function() {
                       $('.school').delay(300).animate({opacity:1, top:0}, 500, function(){
 
                       });
-                      $('.hobby').delay(600).animate({opacity:1, top:0}, 500, function(){
+                      $('.hobby').delay(600).animate({opacity:1, top:-150}, 500, function(){
 
                       });
                       $('.resume').delay(900).animate({opacity:1, top:0}, 500, function(){
@@ -176,14 +171,14 @@ $(document).ready(function() {
                 // functions call
 
              if (windowWidth  > 1223) {
-                    if(windowScrollTop>400){
+                    if(windowScrollTop>500){
                         aboutAnimation();
                     }
 
                     if(windowScrollTop>1400){
                         skillsAnimation();
                     }
-                    if(windowScrollTop>2000){
+                    if(windowScrollTop>2300){
                         galleryAnimation();
                     }
                     if(windowScrollTop>3000){
